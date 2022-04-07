@@ -1,0 +1,18 @@
+@import "./vars.scss";
+
+html{
+    font-family: $primary-font;
+    font-size: 15px;
+    font-weight: 400;
+    // line-height: 24px;
+    line-height: 160%;
+    color: $primary-color;
+    background: $secondary-color;  
+    scroll-behavior: smooth;  
+}
+
+.container{
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}

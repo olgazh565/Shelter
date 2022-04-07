@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Shelter 
+        link(rel="stylesheet", href=".assets/scss/app.css")
+    body 
+        include ./components/header
+        block main
+            main.main
+                include ./components/about
+                include ./components/friends
+                include ./components/help
+                include ./components/donation 
+                include ./components/footer
+        include ./components/footer
+        script(type="module" src="./assets/js/app.js")          

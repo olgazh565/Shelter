@@ -8,11 +8,16 @@ html{
     line-height: 160%;
     color: $primary-color;
     background: $secondary-color;  
-    scroll-behavior: smooth;  
+    scroll-behavior: smooth; 
+    
 }
 
 .container{
-    max-width: 1230px;
-    padding: 0 15px;
+    max-width: 1280px;
+    padding: 0 40px;
     margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
 }

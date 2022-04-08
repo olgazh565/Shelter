@@ -1,0 +1,127 @@
+@import "./main/vars.scss";
+
+.header__background{
+    background: url('../imgs/background1.png');
+    background: url('../imgs/gradient1.png'), radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%) , #211F20;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    height: 910px;
+    padding-top: 40px;
+}
+.header__container{
+    position: relative;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    // align-items: center;
+    height: 60px;
+    margin-top: 23px;
+}
+.header__logo{
+    
+    
+}
+.header__title{
+    font-family: $primary-font;
+    color: $pinky-color;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    line-height: 110%;
+    padding-bottom: 5px;
+
+}
+.header__subtitle{
+    font-family: $secondary-font;
+    color: $secondary-color;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    padding-left: 5px;
+}
+
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    // align-items: center;
+}
+.nav__item{
+    margin-left: 36px;
+}
+.nav__item a{
+    font-family: $secondary-font;
+    font-size: 15px;
+    color: $grey-color;
+}
+a.active{
+    color: $light-color;
+    color: #FAFAFA;
+    font-family: $secondary-font;
+    font-size: 15px;
+    position: relative;
+    
+    &::after{
+        content: '';
+        border: 2px solid $pinky-color;
+        position: absolute;
+        width: 110px;
+        top: 20px;
+        left: 0;
+    }
+}       
+       
+.header__intro{
+    display: flex;
+    justify-content: space-between; 
+    padding-top: 60px; 
+    // align-items: center;
+}    
+.header__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 42%;
+}
+.header__heading{
+    font-family: $primary-font;
+    color: $secondary-color;
+    font-size: 44px;
+    line-height: 57px;
+    font-weight: 400;
+    max-width: 70%;
+    padding-top: 163px;
+} 
+.header__subheading{
+    font-family: $secondary-font;
+    color: $grey-color;
+    font-size: 15px;
+    line-height: 160%;
+    max-width: 93%;
+    padding: 41px 0;
+}
+.header__button{
+    padding: 15px 0px 15px 45px;
+    width: 207px;
+    height: 52px;
+    background: $pinky-color;
+    border-radius: 100px;
+
+    & a{
+        font-family: $primary-font;
+        font-size: 17px;
+        color: #292929;
+        letter-spacing: 0.06em;
+
+    }
+}
+.header__img{
+    max-width: 58%;
+    width: 100%;
+    padding-right: 5px;
+}

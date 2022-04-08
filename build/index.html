@@ -5,18 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shelter </title>
-    <link rel="stylesheet" href=".assets/scss/app.css">
+    <link rel="stylesheet" href="./assets/css/app.css">
   </head>
   <body> 
-    <header class="background"> 
-      <div class="container"> 
+    <div class="header__background"> 
+      <div class="header__container container">
         <header class="header"> 
-          <div class="header__intro"> 
-            <div class="header__logo"> </div>
+          <div class="header__logo">
+            <h2 class="header__title">Cozy House</h2>
+            <p class="header__subtitle">Shelter for pets in Boston</p>
           </div>
+          <nav class="header__nav"> 
+            <ul class="nav"> 
+              <li class="nav__item"> <a class="active" href="#">About the shelter</a></li>
+              <li class="nav__item"> <a href="./pets.html">Our pets</a></li>
+              <li class="nav__item"> <a href="#">Help the shelter</a></li>
+              <li class="nav__item"> <a href="#">Contacts</a></li>
+            </ul>
+          </nav>
         </header>
+        <section class="header__intro">       
+          <div class="header__text"> 
+            <h2 class="header__heading">Not only people need a house</h2>
+            <div class="header__subheading">We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she will love you more than anybody else in the world, you will see!</div>
+            <div class="header__button"> <a href="./pets.html">Make a friend</a></div>
+          </div>
+          <div class="header__img"><img src="./assets/imgs/puppy-main.png" alt="alt"></div>
+        </section>
       </div>
-    </header>
+    </div>
     <main class="main"></main>
     <script type="module" src="./assets/js/app.js">         </script>
   </body>

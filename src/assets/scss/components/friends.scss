@@ -1,0 +1,103 @@
+.friends__background{
+    background: #F6F6F6;
+    height: 877px;
+}
+.friends{
+    text-align: center;
+}
+.friends__heading1, .friends__heading2{
+    font-family: $primary-font;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    color: $dark-grey-color;
+    margin-left: 2px;   
+}
+.friends__heading1{
+    padding-top: 81px;   
+}
+.slider{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 82.5%;
+    margin: 59px auto 60px auto;   
+}
+.slider__card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #FAFAFA;;
+    height: 435px;
+    max-width: 270px;
+}
+.slider__img{
+    max-width: 100%;
+}
+.slider__name{
+    font-family: $primary-font;
+    color: #545454;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    padding: 22px 0 30px 2px;    
+}
+.slider__button{
+    font-family: $primary-font;
+    color: #292929;
+    size: 17px;
+    letter-spacing: 0.06em;
+    font-weight: 400;
+    line-height: 130%;
+    border: 2px solid $pinky-color;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 187px;
+    height: 52px;    
+    padding-left: 8px;
+    letter-spacing: 0.05em;
+}
+.friends__button-left{
+    position: absolute;    
+    left: -10.5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 52px;
+    height: 52px;
+    border: 2px solid $pinky-color;
+    box-sizing: border-box;
+    border-radius: 100px;
+    padding-bottom: 5px;
+}
+.friends__button-right{
+    position: absolute;    
+    left: 105.5%;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 52px;
+    height: 52px;
+    border: 2px solid $pinky-color;
+    box-sizing: border-box;
+    border-radius: 100px;
+    padding-bottom: 5px;
+}
+.friends__button_main{
+    margin: 0 auto;
+    background: $pinky-color;
+    border-radius: 100px;
+    width: 261px;
+    height: 52px;   
+    padding: 15px 0px 15px 0px;  
+
+    & a{
+        font-family: $primary-font;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 130%;     
+        letter-spacing: 0.06em;       
+        color: #292929;    
+    }
+}

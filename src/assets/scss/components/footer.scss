@@ -1,0 +1,83 @@
+footer{
+    background: url('../imgs/footer-background.png');
+    background: url('../imgs/gradient1.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    height: 350px;
+}
+.footer__container{
+    padding-top: 40px;
+}
+.footer__content{
+    display: flex;
+    justify-content: space-between;
+}
+.contacts, .locations, .footer__img{
+    max-width: 25.5%;
+}
+.locations{
+    margin-right: 22px;
+}
+.contacts__title{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;   
+    letter-spacing: 0.06em;
+    color: $secondary-color;
+    padding-top: 18px;
+    padding-bottom: 42px;
+}
+.contacts__email{
+    display: flex;
+    padding-bottom: 42px;
+    align-items: center;
+}
+.email__text{
+    padding-left: 20px;
+}
+.contacts__phone{
+    display: flex;
+    align-items: center;
+}
+.phone__text{
+    padding-left: 20px;
+}
+.locations__title{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;   
+    letter-spacing: 0.06em;
+    color: $secondary-color;
+    padding-top: 18px;
+    padding-bottom: 33px;
+}
+.locations__boston{
+    display: flex;
+    align-items: center;
+    padding-bottom: 32px;
+}
+.locations__london{
+    display: flex;
+    align-items: center;
+}
+.email__text, .phone__text, .locations__text{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;   
+    letter-spacing: 0.06em;
+    color: $pinky-color;
+}
+.locations__text{
+    padding-left: 20px;
+}
+.footer__img{
+    // max-width: ;
+    
+    // & img{
+    //     padding-top: 30px;
+    // }
+} 

@@ -1,0 +1,92 @@
+.pets__background{
+   background: #F6F6F6;
+   height: 1340px;
+
+}
+.pets{
+    text-align: center;
+}
+.pets__heading{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.06em;
+    color: #545454;
+    padding-top: 79px;
+    padding-bottom: 60px;
+}
+.pets__cards{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 30px 40px;
+    margin-bottom: 60px;
+}
+.card{
+    background: #FAFAFA;
+    border-radius: 9px;
+}
+.card__img{
+    padding-bottom: 23px;
+}
+.card__name{
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;       
+    letter-spacing: 0.06em;  
+    color: #545454;
+    padding-bottom: 30px;
+    padding-left: 2px;
+}
+.card__button{
+    border: 2px solid #F1CDB3;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 187px;
+    height: 52px;
+    margin-bottom: 30px;
+    letter-spacing: 0.06em;
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 130%; 
+    color: #292929;
+
+}
+.pets__navigation{
+    display: flex;
+    justify-content: space-between;
+    max-width: 360px;
+    margin: 0 auto;
+}
+.navigation__button{
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 100px;
+    width: 52px;
+    height: 52px;
+    margin: 0 10px 0 10px;
+}
+.navigation__button:nth-child(3){
+    background: #F1CDB3;
+    border-radius: 100px;
+    border: none;
+    font-family: $primary-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;  
+    color: #292929;
+    // margin: 0 -1px;
+}
+.navigation__button:nth-child(4){
+    border: 2px solid #F1CDB3;
+}
+.navigation__button:nth-child(5){
+    border: 2px solid #F1CDB3;
+}

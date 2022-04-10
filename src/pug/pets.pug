@@ -5,5 +5,11 @@ html(lang="en")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Shelter
+        link(rel="stylesheet", href="./assets/css/app.css") 
     body 
-        .h1 hello
+        include ./components/pets-header
+        block main
+            main.main
+                include ./components/pets-gallery                              
+        include ./components/footer
+        script(type="module" src="./assets/js/app.js")  

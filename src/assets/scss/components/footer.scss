@@ -1,6 +1,7 @@
 footer{
-    background: url('../imgs/footer-background.png');
-    background: url('../imgs/gradient1.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    // background: url('../imgs/footer-background.png') cover;
+    // background: url('../imgs/gradient1.png'), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+    background: url('../imgs/footer-gradient-background.png') center/cover;
     height: 350px;
 }
 .footer__container{
@@ -30,12 +31,20 @@ footer{
 .contacts__email{
     display: flex;
     padding-bottom: 42px;
-    align-items: center;
+    // align-items: center;
+}
+.contacts__email > a{
+   display: flex;
+   align-items: center;
 }
 .email__text{
-    padding-left: 20px;
+    padding-left: 20px;    
 }
 .contacts__phone{
+    display: flex;
+    align-items: center;
+}
+.contacts__phone > a{
     display: flex;
     align-items: center;
 }
@@ -51,14 +60,22 @@ footer{
     letter-spacing: 0.06em;
     color: $secondary-color;
     padding-top: 18px;
-    padding-bottom: 33px;
+    padding-bottom: 32px;
 }
 .locations__boston{
     display: flex;
     align-items: center;
     padding-bottom: 32px;
 }
+.locations__boston > a{
+    display: flex;
+    align-items: center;    
+}
 .locations__london{
+    display: flex;
+    align-items: center;
+}
+.locations__london > a{
     display: flex;
     align-items: center;
 }

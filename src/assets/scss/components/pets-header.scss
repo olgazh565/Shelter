@@ -1,0 +1,67 @@
+@import "./main/vars.scss";
+
+.header-pets{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 117px;
+    // margin-top: 23px;
+}
+.header__logo{
+    
+    
+}
+.header__title-pets{
+    font-family: $primary-font;
+    color: #545454;
+    font-size: 32px;
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 0.06em;
+    line-height: 110%;
+    padding-bottom: 5px;   
+}
+.header__subtitle-pets{
+    font-family: $secondary-font;
+    color: #292929;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    padding-left: 5px;
+}
+.header__nav-pets{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-pets{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    // align-items: center;
+}
+.nav__item-pets{
+    margin-left: 36px;
+}
+.nav__item-pets a{
+    font-family: $secondary-font;
+    font-size: 15px;
+    color: #545454;
+    scroll-behavior: smooth;
+}
+a.active-pets{
+    color: $light-color;
+    color: #292929;
+    font-family: $secondary-font;
+    font-size: 15px;
+    position: relative;
+    
+    &::after{
+        content: '';
+        border: 2px solid $pinky-color;
+        position: absolute;
+        width: 54px;
+        top: 20px;
+        left: 0;
+    }
+}       
+       

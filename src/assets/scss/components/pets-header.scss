@@ -1,16 +1,17 @@
-@import "./main/vars.scss";
-
+.pets-header{
+    background: $secondary-color;
+    height: 117px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;    
+}
 .header-pets{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 117px;
-    // margin-top: 23px;
-}
-.header__logo{
-    
-    
-}
+    height: 117px;   
+}  
 .header__title-pets{
     font-family: $primary-font;
     color: #545454;
@@ -31,13 +32,12 @@
 .header__nav-pets{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: center;    
 }
 .nav-pets{
     display: flex;
     justify-content: space-between;
     padding-bottom: 10px;
-    // align-items: center;
 }
 .nav__item-pets{
     margin-left: 36px;
@@ -47,6 +47,9 @@
     font-size: 15px;
     color: #545454;
     scroll-behavior: smooth;
+    &:hover{
+        color: #292929;
+    }
 }
 a.active-pets{
     color: $light-color;

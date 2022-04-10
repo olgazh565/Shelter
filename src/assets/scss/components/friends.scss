@@ -5,17 +5,14 @@
 .friends{
     text-align: center;
 }
-.friends__heading1, .friends__heading2{
+.friends__heading{
     font-family: $primary-font;
     font-size: 35px;
     font-weight: 400;
     line-height: 45px;
-    letter-spacing: 0.06em;
-    margin: 0 auto;
+    letter-spacing: 0.06em;   
     color: $dark-grey-color;
-    margin-left: 2px;   
-}
-.friends__heading1{
+    margin-left: 2px;  
     padding-top: 81px;   
 }
 .slider{
@@ -32,6 +29,14 @@
     background: #FAFAFA;;
     height: 435px;
     max-width: 270px;
+    &:hover{
+        cursor: pointer;
+        background: $secondary-color;
+    }
+}
+.slider__card:hover .slider__button{
+    background: #FDDCC4;
+    border: none;
 }
 .slider__img{
     max-width: 100%;
@@ -57,7 +62,7 @@
     width: 187px;
     height: 52px;    
     padding-left: 8px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05em;   
 }
 .friends__button-left{
     position: absolute;    
@@ -70,6 +75,10 @@
     box-sizing: border-box;
     border-radius: 100px;
     padding-bottom: 5px;
+    &:hover{
+        background:#FDDCC4;
+        border: none;
+    }
 }
 .friends__button-right{
     position: absolute;    
@@ -82,6 +91,10 @@
     box-sizing: border-box;
     border-radius: 100px;
     padding-bottom: 5px;
+    &:hover{
+        background:#FDDCC4;
+        border: none;
+    }
 }
 .friends__button_main{
     margin: 0 auto;
@@ -90,7 +103,6 @@
     width: 261px;
     height: 52px;   
     padding: 15px 0px 15px 0px;  
-
     & a{
         font-family: $primary-font;
         font-style: normal;
@@ -99,5 +111,8 @@
         line-height: 130%;     
         letter-spacing: 0.06em;       
         color: #292929;    
+    }
+    &:hover{
+        background: #FDDCC4;
     }
 }

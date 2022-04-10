@@ -3,15 +3,12 @@
     height: 462px;
 }
 .donation{
-    display: flex;
-    // justify-content: center;
+    display: flex;   
 } 
 .donation__content{
     max-width: 88%;
-    // margin: 0 0 0 80px;
     display: flex;
-    padding: 80px 0 100px 143px;
-    // padding: 80px 0 80px 0;
+    padding: 80px 0 100px 143px;    
     justify-content: space-between;
 }   
 .dontation__img img{
@@ -22,19 +19,15 @@
     flex-direction: column; 
     padding-left: 30px;   
 }
-.donation__heading1, .donation__heading2{
+.donation__heading{
     font-family: $primary-color;
     font-style: normal;
     font-weight: 400;
     font-size: 35px;
     line-height: 45px;  
     letter-spacing: 0.06em;   
-    color: #545454;   
-}
-.donation__heading1{
+    color: #545454;
     padding-top: 2px;
-} 
-.donation__heading2{
     padding-bottom: 20px;
 }
 .donation__subheading{
@@ -62,7 +55,6 @@
 .donation__number{
     padding-left: 15px;
     padding-top: 2px;
-        
     & a{
         font-family: $primary-font;
         font-style: normal;

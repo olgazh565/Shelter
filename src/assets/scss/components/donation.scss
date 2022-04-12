@@ -47,7 +47,11 @@
     border-radius: 9px;
     width: 349px;
     height: 43px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px; 
+    &:hover{
+        background:#FDDCC4;
+        border: none;
+    }   
 }
 .donation__icon{
     padding: 10px 0 10px 15px;

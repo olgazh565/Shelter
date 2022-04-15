@@ -10,19 +10,25 @@
   <body> 
     <div class="header__background"> 
       <div class="header__container container">
-        <header class="header"> 
+        <header class="header header__burger"> 
           <div class="header__logo"><a href="##"> 
               <h1 class="header__title">Cozy House</h1></a>
             <p class="header__subtitle">Shelter for pets in Boston</p>
           </div>
-          <nav class="header__nav"> 
-            <ul class="nav"> 
-              <li class="nav__item"> <a class="active" href="#">About the shelter</a></li>
-              <li class="nav__item"> <a href="./pets.html">Our pets</a></li>
-              <li class="nav__item"> <a href="#help">Help the shelter</a></li>
-              <li class="nav__item"> <a href="#contacts">Contacts</a></li>
-            </ul>
-          </nav>
+          <div class="header__blackout">
+            <div class="header__wrapper">
+              <nav class="header__nav nav_burger"> 
+                <ul class="nav"> 
+                  <li class="nav__item"> <a class="active nav__item_burger" href="#">About the shelter</a></li>
+                  <li class="nav__item"> <a href="./pets.html">Our pets</a></li>
+                  <li class="nav__item"><a class="disabled" href="#help">Help the shelter</a></li>
+                  <li class="nav__item"> <a class="disabled" href="#contacts">Contacts</a></li>
+                </ul>
+                <div class="nav__burger_close"> <img src="./assets/imgs/burger-open.svg" alt="burger"></div>
+              </nav>
+            </div>
+          </div>
+          <div class="nav__burger_open"><img src="./assets/imgs/burger.svg" alt="burger"></div>
         </header>
         <section class="header__intro">       
           <div class="header__text"> 
@@ -132,9 +138,9 @@
         <div class="footer__content">
           <div class="footer__contacts contacts">           
             <h3 class="contacts__title">For questions and suggestions</h3>
-            <div class="contacts__email"> <a href="mailto:"> <img src="./assets/imgs/mail.svg" alt="email">
+            <div class="contacts__email"> <a href="mailto: email@shelter.com"> <img src="./assets/imgs/mail.svg" alt="email">
                 <p class="email__text">email@shelter.com            </p></a></div>
-            <div class="contacts__phone"><a href="tel:"> <img src="./assets/imgs/phone.svg" alt="phone">
+            <div class="contacts__phone"><a href="tel: +13 674 567 75 54"> <img src="./assets/imgs/phone.svg" alt="phone">
                 <p class="phone__text">+13 674 567 75 54</p></a></div>
           </div>
           <div class="footer__locations locations">

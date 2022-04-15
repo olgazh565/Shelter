@@ -1,23 +1,72 @@
 .donation__background{
     background: #F6F6F6;
     height: 462px;
+    @media(max-width: 1279px){ 
+        height: 783px;
+    } 
+    @media(max-width: 767px){ 
+        height: 542px;
+    }
 }
 .donation{
-    display: flex;   
-} 
+    display: flex;
+    @media(max-width: 1279px){
+        justify-content: center;
+    } 
+    @media(max-width: 767px){ 
+        text-align: center;
+    }
+}
 .donation__content{
     max-width: 88%;
     display: flex;
     padding: 80px 0 100px 143px;    
     justify-content: space-between;
-}   
+    @media(max-width: 1279px){
+        flex-direction: column;
+        padding: 81px 0 100px 0; 
+        margin: 0 auto;         
+    }
+    @media(max-width: 767px){ 
+        padding: 38px 0 0 0; 
+        max-width: 100%;
+              
+    }
+} 
+.dontation__img{
+    @media(max-width: 1279px){ 
+        order: 1; 
+        max-width: 505px;
+        margin: 0 auto;       
+    }
+    @media(max-width: 767px){ 
+        max-width: 260px;
+              
+    }
+}
 .dontation__img img{
     padding-top: 12px;
+    @media(max-width: 1279px){ 
+        padding-top: 0px;        
+    }
+    @media(max-width: 767px){ 
+        max-width: 100%;
+              
+    }
 } 
 .donation__info {
     display: flex;
     flex-direction: column; 
-    padding-left: 30px;   
+    margin-left: 31px;
+    @media(max-width: 1279px){ 
+        order: 0; 
+        padding-bottom: 60px;
+        max-width: 380px;
+        margin: 0 auto;        
+    } 
+    @media(max-width: 767px){
+        padding-bottom: 43px;
+    }
 }
 .donation__heading{
     font-family: $primary-color;
@@ -29,6 +78,13 @@
     color: #545454;
     padding-top: 2px;
     padding-bottom: 20px;
+    @media(max-width: 767px){
+        font-size: 25px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 130%; 
+        padding-bottom: 23px;
+    }
 }
 .donation__subheading{
     font-family: $primary-color;
@@ -39,6 +95,11 @@
     letter-spacing: 0.06em;
     color: #545454;
     padding-bottom: 19px;
+    @media(max-width: 767px){
+        font-size: 15px;
+        letter-spacing: 0em;
+        padding-bottom: 23px;
+    }
 }
 .donation__card{
     display: flex;
@@ -52,9 +113,18 @@
         background:#FDDCC4;
         border: none;
     }   
+    @media(max-width: 767px){ 
+        width: 281px; 
+        margin: 0 auto 21px auto; 
+                
+    }
+
 }
 .donation__icon{
     padding: 10px 0 10px 15px;
+    @media(max-width: 767px){ 
+        padding: 12px 0 10px 13px;
+    }
 }
 .donation__number{
     padding-left: 15px;
@@ -66,7 +136,10 @@
         font-size: 20px;
         line-height: 115%;  
         letter-spacing: 0.06em;        
-        color: #545454;         
+        color: #545454; 
+        @media(max-width: 767px){ 
+            font-size: 15px;                         
+        }        
     }
 }
 .donation__text{
@@ -76,4 +149,9 @@
     font-size: 12px;
     line-height: 18px;  
     color: #B2B2B2;
+    @media(max-width: 767px){ 
+        text-align: justify;
+        max-width: 94%;  
+        margin: 0 auto;               
+    }  
 }

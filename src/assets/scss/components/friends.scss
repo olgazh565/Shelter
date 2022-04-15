@@ -1,9 +1,14 @@
 .friends__background{
     background: #F6F6F6;
     height: 877px;
+    @media(max-width: 767px){
+        height: 791px;
+    }
 }
+
 .friends{
     text-align: center;
+   
 }
 .friends__heading{
     font-family: $primary-font;
@@ -13,14 +18,26 @@
     letter-spacing: 0.06em;   
     color: $dark-grey-color;
     margin-left: 2px;  
-    padding-top: 81px;   
+    padding-top: 81px; 
+    @media(max-width: 767px){
+        font-size: 25px;
+        padding-top: 42px; 
+        line-height: 130%;       
+    }
 }
 .slider{
     display: flex;
     justify-content: space-between;
     position: relative;
     max-width: 82.5%;
-    margin: 59px auto 60px auto;   
+    margin: 59px auto 60px auto; 
+    @media(max-width: 1279px){
+        max-width: 580px;
+    }
+    @media(max-width: 767px){
+        max-width: 270px;
+        margin: 40px auto 114px auto;
+    }
 }
 .slider__card{
     display: flex;
@@ -38,6 +55,16 @@
 .slider__card:hover .slider__button{
     background: #FDDCC4;
     border: none;
+}
+@media(max-width: 1279px){
+    .slider__card:nth-child(3){
+        display: none;
+    }
+}
+@media(max-width: 767px){
+    .slider__card:nth-child(2){
+        display: none;
+    }
 }
 .slider__img{
     max-width: 100%;
@@ -80,6 +107,13 @@
         background:#FDDCC4;
         border: none;
     }
+    @media(max-width: 1279px){
+        left: -11%;
+    }
+    @media(max-width: 767px){
+        left: 43px;
+        top: 480px;
+    }
 }
 .friends__button-right{
     position: absolute;    
@@ -95,6 +129,13 @@
     &:hover{
         background:#FDDCC4;
         border: none;
+    }
+    @media(max-width: 1279px){
+        left: 102%;
+    }
+    @media(max-width: 767px){
+        left: 175px;
+        top: 480px;
     }
 }
 .friends__button_main{

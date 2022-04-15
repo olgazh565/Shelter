@@ -2,6 +2,12 @@
    background: #F6F6F6;
    height: 1340px;
    margin-top: 117px;
+   @media(max-width: 1279px){
+        height: 1730px;
+   } 
+   @media(max-width: 767px){ 
+        height: 1650px;
+   }
 }
 .pets{
     text-align: center;
@@ -13,10 +19,18 @@
     font-size: 35px;
     line-height: 45px;
     letter-spacing: 0.06em;
-    color: #545454;
-    padding-top: 79px;
-    padding-bottom: 60px;
-    padding-left: 2px;
+    color: #545454;    
+    padding: 79px 0 60px 2px;
+    @media(max-width: 1279px){
+        padding: 79px 0 30px 2px;
+    } 
+    @media(max-width: 767px){
+        font-size: 25px;
+        margin: 0 auto;
+        letter-spacing: 0.06em;  
+        padding: 40px 0 40px 2px; 
+        line-height: 130%;         
+    }
 }
 .pets__cards{
     display: grid;
@@ -24,6 +38,20 @@
     grid-template-rows: auto auto;
     gap: 30px 40px;
     margin-bottom: 60px;
+    @media(max-width: 1279px){
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        gap: 30px 40px;
+        max-width: 580px;
+        margin: 0 auto 38px auto;
+    }
+    @media(max-width: 767px){
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        gap: 30px 0;  
+        max-width: 270px;
+        margin: 0 auto 42px auto;
+    }
 }
 .card{
     background: #FAFAFA;
@@ -32,6 +60,16 @@
         cursor: pointer;
         background: $secondary-color;
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+    }   
+}
+.card:nth-child(7), .card:nth-child(8){
+    @media(max-width: 1279px){
+        display: none;
+    }
+}
+.card:nth-child(4), .card:nth-child(5), .card:nth-child(6){
+    @media(max-width: 767px){
+        display: none;
     }
 }
 .card:hover .card__button{
@@ -71,7 +109,11 @@
     display: flex;
     justify-content: space-between;
     max-width: 360px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    @media(max-width: 767px){
+        max-width: 300px;
+    }
+
 }
 .navigation__button{
     border: 2px solid #CDCDCD;
@@ -79,7 +121,11 @@
     border-radius: 100px;
     width: 52px;
     height: 52px;
-    margin: 0 10px 0 10px;    
+    margin: 0 10px 0 10px; 
+    @media(max-width: 767px){
+        margin: 0; 
+    }
+   
 }
 .navigation__button:nth-child(3){
     background: $pinky-color;

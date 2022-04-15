@@ -23,6 +23,14 @@
         background: #FDDCC4;
         border: none;
     }
+    @media(max-width: 1279px){
+        left: 620px;
+        top: -52px;
+    }
+    @media(max-width: 767px){
+        left: 215px;
+        top: -52px;
+    }
 }
 .modal__window{
     position: relative;
@@ -32,18 +40,32 @@
     justify-content: center;
     width: 900px;
     height: 500px;
-    margin-top: 52px;      
+    margin-top: 52px;  
+    @media(max-width: 1279px){
+        width: 630px;
+        height: 350px;
+    }
+    @media(max-width: 767px){
+        width: 240px;
+        height: 341px;
+    }
 }
 .modal__img{
     display: block;
+    @media(max-width: 767px){
+        display: none;
+    }
 }
 .modal__content{
     display: flex;
-    flex-direction: column;
-    // justify-content: flex-start;
+    flex-direction: column;    
     justify-content: left;
     padding-left: 30px;
     padding-right: 16px;
+    @media(max-width: 1279px){
+        padding-left: 10px;
+        padding-right: 5px;
+    }
 }
 .modal__heading{
     font-family: $primary-font;
@@ -55,6 +77,13 @@
     color: #000000;
     padding-top: 50px;
     padding-bottom: 8px;
+    @media(max-width: 1279px){
+        font-size: 35px;
+        padding-top: 10px;
+    }
+    @media(max-width: 767px){
+        text-align: center;
+    }
 }
 .modal__subheading{
     font-family: $primary-font;
@@ -65,6 +94,13 @@
     letter-spacing: 0.06em;
     color: #000000;
     padding-bottom: 41px;
+    @media(max-width: 1279px){
+        font-size: 20px;
+        padding-bottom: 22px;
+    }    
+    @media(max-width: 767px){
+        text-align: center;
+    }
 }
 .modal__description{
     font-family: $primary-font;
@@ -75,6 +111,14 @@
     letter-spacing: 0.06em;
     color: #000000;
     padding-bottom: 40px;
+    @media(max-width: 1279px){
+        font-size: 13px; 
+        line-height: 110%; 
+        padding-bottom: 18px;
+    }
+    @media(max-width: 767px){
+        text-align: justify;
+    }
 }
 .modal__list{
     padding-left: 5px;
@@ -96,4 +140,7 @@
         right: 100%;
         position: absolute;        
     }
-}
+    @media(max-width: 1279px){
+        padding-bottom: 5px;
+    }
+}    

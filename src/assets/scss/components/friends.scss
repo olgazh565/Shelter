@@ -1,14 +1,13 @@
 .friends__background{
     background: #F6F6F6;
     height: 877px;
+    position: relative;
     @media(max-width: 767px){
         height: 791px;
     }
 }
-
 .friends{
-    text-align: center;
-   
+    text-align: center;    
 }
 .friends__heading{
     font-family: $primary-font;
@@ -27,17 +26,31 @@
 }
 .slider{
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    max-width: 82.5%;
+    justify-content: space-between;    
+    position: relative;    
+    width: 990px;
+    // width: 100%;
+    overflow: hidden;   
     margin: 59px auto 60px auto; 
+    
     @media(max-width: 1279px){
-        max-width: 580px;
+        max-width: 630px;
     }
     @media(max-width: 767px){
         max-width: 270px;
         margin: 40px auto 114px auto;
     }
+}
+.swiper-wrapper{    
+    width: 100%;
+    height: 100%;
+    // z-index: 1;
+    display: flex;
+    transition-property: transform;
+    justify-content: space-between;    
+    // gap: 0 90px;
+    margin: 0 auto;   
+        
 }
 .slider__card{
     display: flex;
@@ -50,20 +63,10 @@
         cursor: pointer;
         background: $secondary-color;
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-    }
-}
-.slider__card:hover .slider__button{
-    background: #FDDCC4;
-    border: none;
-}
-@media(max-width: 1279px){
-    .slider__card:nth-child(3){
-        display: none;
-    }
-}
-@media(max-width: 767px){
-    .slider__card:nth-child(2){
-        display: none;
+        .slider__button{
+            background: #FDDCC4;
+            border: none;
+        }
     }
 }
 .slider__img{
@@ -80,7 +83,7 @@
 .slider__button{
     font-family: $primary-font;
     color: #292929;
-    size: 17px;
+    font-size: 17px;
     letter-spacing: 0.06em;
     font-weight: 400;
     line-height: 130%;
@@ -94,7 +97,9 @@
 }
 .friends__button-left{
     position: absolute;    
-    left: -10.5%;
+    // left: -10.5%;
+    left: 1px;
+    // top: -50px;
     top: 50%;
     transform: translate(0, -50%);
     width: 52px;
@@ -103,21 +108,29 @@
     box-sizing: border-box;
     border-radius: 100px;
     padding-bottom: 5px;
+    
+    display: block;
     &:hover{
         background:#FDDCC4;
         border: none;
     }
     @media(max-width: 1279px){
-        left: -11%;
+        // left: -11%;
+        left: 1px;
+
     }
     @media(max-width: 767px){
-        left: 43px;
-        top: 480px;
+        // left: 43px;
+        left: 1px;
+        // top: 480px;
+        top: 50%;
     }
 }
 .friends__button-right{
     position: absolute;    
-    left: 105.5%;
+    left: 938px;
+    // left: 105.5%;
+    // top: -50px;
     top: 50%;
     transform: translate(0, -50%);
     width: 52px;
@@ -126,16 +139,21 @@
     box-sizing: border-box;
     border-radius: 100px;
     padding-bottom: 5px;
+    
+    display: block;
     &:hover{
         background:#FDDCC4;
         border: none;
     }
     @media(max-width: 1279px){
-        left: 102%;
+        // left: 102%;
+        left: 575px;
     }
     @media(max-width: 767px){
-        left: 175px;
-        top: 480px;
+        // left: 175px;
+        left: 215px;
+        // top: 480px;
+        top: 50%;
     }
 }
 .friends__button_main{

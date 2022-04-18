@@ -2,14 +2,23 @@
 
 .modal{
     background: rgba(41, 41, 41, 0.6);
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 2;
+    display: none;
+    &:hover{
+        .modal__close-button{
+            background: #FDDCC4;
+            border: none;
+        }        
+    }       
 }
 .modal__close-button{
     position: absolute;
@@ -17,7 +26,7 @@
     height: 52px;
     left: 890px;
     top: -52px;
-    border: 2px solid #F1CDB3;    
+    border: 2px solid #F1CDB3; 
     border-radius: 100px;
     &:hover{
         background: #FDDCC4;
@@ -39,8 +48,8 @@
     display: flex;
     justify-content: center;
     width: 900px;
-    height: 500px;
-    margin-top: 52px;  
+    height: 500px;   
+    z-index: 10;
     @media(max-width: 1279px){
         width: 630px;
         height: 350px;
@@ -49,12 +58,18 @@
         width: 240px;
         height: 341px;
     }
+    // &:hover{
+    //     .modal__close-button{
+    //         background: none;
+    //         border: 2px solid #F1CDB3;    
+    //     }        
+    // }    
 }
 .modal__img{
     display: block;
     @media(max-width: 767px){
         display: none;
-    }
+    }    
 }
 .modal__content{
     display: flex;
@@ -65,6 +80,12 @@
     @media(max-width: 1279px){
         padding-left: 10px;
         padding-right: 5px;
+    }
+    &:hover{
+        .modal__close-button{
+            background: none;
+            border: 2px solid #F1CDB3;
+        }        
     }
 }
 .modal__heading{
@@ -123,7 +144,7 @@
 .modal__list{
     padding-left: 5px;
 }
-.list__item{
+.list__item1, .list__item2, .list__item3, .list__item4{
     font-family: $primary-font;
     font-style: normal;
     font-weight: 400;

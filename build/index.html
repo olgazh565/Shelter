@@ -54,26 +54,69 @@
       <div class="friends__background">
         <div class="container friends"> 
           <h3 class="friends__heading" id="friends">Our friends who <br/> are looking for a house                                  </h3>
-          <div class="friends__slider slider">
-            <div class="slider__card"> 
-              <div class="slider__img"> <img src="./assets/imgs/pets-katrine.png" alt="cat"></div>
-              <p class="slider__name">Katrine </p>
-              <button class="slider__button">Learn more</button>
+          <div class="friends__slider slider swiper">
+            <div class="swiper-wrapper">
+              <div class="slider__card swiper-slide" id="katrine">
+                <div class="slider__img"> <img src="./assets/imgs/pets-katrine.png" alt="cat"></div>
+                <p class="slider__name">Katrine </p>
+                <button class="slider__button">Learn more</button>
+              </div>
+              <div class="slider__card swiper-slide" id="jennifer">
+                <div class="slider__img"> <img src="./assets/imgs/pets-jennifer.png" alt="puppy"></div>
+                <p class="slider__name">Jennifer</p>
+                <button class="slider__button">Learn more</button>
+              </div>
+              <div class="slider__card swiper-slide" id="Woody">
+                <div class="slider__img"> <img src="./assets/imgs/pets-woody.png" alt="dog"></div>
+                <p class="slider__name">Woody</p>
+                <button class="slider__button">Learn more</button>
+              </div>
+              <div class="slider__card swiper-slide"> 
+                <div class="slider__img"><img src="./assets/imgs/pets-sophia.png" alt="sophia"></div>
+                <p class="slider__name">Sophia </p>
+                <button class="slider__button">Learn more </button>
+              </div>
+              <div class="slider__card swiper-slide">
+                <div class="slider__img"><img src="./assets/imgs/pets-timmy.png" alt="timmy"></div>
+                <p class="slider__name">Timmy</p>
+                <button class="slider__button">Learn more </button>
+              </div>
+              <div class="slider__card swiper-slide"> 
+                <div class="slider__img"><img src="./assets/imgs/pets-charly.png" alt="charly"></div>
+                <p class="slider__name">Charly </p>
+                <button class="slider__button">Learn more </button>
+              </div>
+              <div class="slider__card swiper-slide">
+                <div class="slider__img"><img src="./assets/imgs/pets-scarlet.png" alt="scarlet"></div>
+                <p class="slider__name">Scarlett </p>
+                <button class="slider__button">Learn more </button>
+              </div>
+              <div class="slider__card swiper-slide"> 
+                <div class="slider__img"> <img src="./assets/imgs/pets-freddie.png" alt="freddie"></div>
+                <p class="slider__name">Freddie </p>
+                <button class="slider__button">Learn more </button>
+              </div>
             </div>
-            <div class="slider__card"> 
-              <div class="slider__img"> <img src="./assets/imgs/pets-jennifer.png" alt="puppy"></div>
-              <p class="slider__name">Jennifer</p>
-              <button class="slider__button">Learn more</button>
-            </div>
-            <div class="slider__card"> 
-              <div class="slider__img"> <img src="./assets/imgs/pets-woody.png" alt="dog"></div>
-              <p class="slider__name">Woody</p>
-              <button class="slider__button">Learn more</button>
-            </div>
-            <button class="friends__button-left"> <img src="./assets/imgs/arrow-left.svg" alt="left"></button>
-            <button class="friends__button-right"><img src="./assets/imgs/arrow-right.svg" alt="right"></button>
+            <button class="friends__button-left swiper-button-prev"> <img src="./assets/imgs/arrow-left.svg" alt="left"></button>
+            <button class="friends__button-right swiper-button-next"><img src="./assets/imgs/arrow-right.svg" alt="right"></button>
           </div>
           <div class="friends__button_main"><a href="./pets.html">Get to know the rest</a></div>
+        </div>
+        <div class="modal"> 
+          <div class="modal__window"> 
+            <button class="modal__close-button"><img src="./assets/imgs/vector.svg" alt="close"></button><img class="modal__img" id="img" src="./assets/imgs/pets-jennifer-modal.png" alt="puppy">
+            <div class="modal__content">
+              <hing id="name">Jennifer</hing>
+              <p class="modal__subheading" id="type">Dog - Labrador</p>
+              <p class="modal__description" id="description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+              <ul class="modal__list"> 
+                <li class="list__item1" id="age"><b>Age:</b> 2 months</li>
+                <li class="list__item2" id="inoculations"><b>Inoculations:</b> none</li>
+                <li class="list__item3" id="diseases"><b>Diseases:</b> none</li>
+                <li class="list__item4" id="parasites"><b>Parasites:</b> none    </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container help" id="help">
@@ -154,6 +197,7 @@
         </div>
       </div>
     </footer>
-    <script type="module" src="./assets/js/app.js">         </script>
+    <script type="module" src="./assets/js/app.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"> </script>
   </body>
 </html>

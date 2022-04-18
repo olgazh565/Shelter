@@ -1,25 +1,65 @@
 .friends__background
     .container.friends 
         h3.friends__heading(id='friends') Our friends who <br/> are looking for a house                                  
-        .friends__slider.slider
-            .slider__card 
-                .slider__img 
-                    img(src="./assets/imgs/pets-katrine.png", alt="cat")
-                p.slider__name Katrine 
-                button.slider__button Learn more
-            .slider__card 
-                .slider__img 
-                    img(src="./assets/imgs/pets-jennifer.png", alt="puppy")
-                p.slider__name Jennifer
-                button.slider__button Learn more
-            .slider__card 
-                .slider__img 
-                    img(src="./assets/imgs/pets-woody.png", alt="dog")
-                p.slider__name Woody
-                button.slider__button Learn more
-            button.friends__button-left 
+        .friends__slider.slider.swiper
+            .swiper-wrapper
+                .slider__card.swiper-slide(id='katrine')
+                    .slider__img 
+                        img(src="./assets/imgs/pets-katrine.png", alt="cat")
+                    p.slider__name Katrine 
+                    button.slider__button Learn more
+                .slider__card.swiper-slide(id='jennifer')
+                    .slider__img 
+                        img(src="./assets/imgs/pets-jennifer.png", alt="puppy")
+                    p.slider__name Jennifer
+                    button.slider__button Learn more
+                .slider__card.swiper-slide(id='Woody')
+                    .slider__img 
+                        img(src="./assets/imgs/pets-woody.png", alt="dog")
+                    p.slider__name Woody
+                    button.slider__button Learn more
+                .slider__card.swiper-slide 
+                    .slider__img
+                        img(src="./assets/imgs/pets-sophia.png", alt="sophia")
+                    p.slider__name Sophia 
+                    button.slider__button Learn more 
+                .slider__card.swiper-slide
+                    .slider__img
+                        img(src="./assets/imgs/pets-timmy.png", alt="timmy")
+                    p.slider__name Timmy
+                    button.slider__button Learn more 
+                .slider__card.swiper-slide 
+                    .slider__img
+                        img(src="./assets/imgs/pets-charly.png", alt="charly")
+                    p.slider__name Charly 
+                    button.slider__button Learn more 
+                .slider__card.swiper-slide
+                    .slider__img
+                        img(src="./assets/imgs/pets-scarlet.png", alt="scarlet")
+                    p.slider__name Scarlett 
+                    button.slider__button Learn more 
+                .slider__card.swiper-slide 
+                    .slider__img 
+                        img(src="./assets/imgs/pets-freddie.png", alt="freddie")
+                    p.slider__name Freddie 
+                    button.slider__button Learn more 
+            button.friends__button-left.swiper-button-prev 
                 img(src='./assets/imgs/arrow-left.svg', alt='left')
-            button.friends__button-right
+            button.friends__button-right.swiper-button-next
                 img(src='./assets/imgs/arrow-right.svg', alt='right') 
         .friends__button_main
             a(href='./pets.html') Get to know the rest
+    .modal 
+        .modal__window 
+            button.modal__close-button
+                img(src="./assets/imgs/vector.svg", alt="close")
+            img.modal__img(id="img")(src="./assets/imgs/pets-jennifer-modal.png", alt="puppy")
+            .modal__content
+                hing(id="name") Jennifer
+                p.modal__subheading(id="type") Dog - Labrador
+                p.modal__description(id="description") Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                ul.modal__list 
+                    li.list__item1(id="age") <b>Age:</b> 2 months
+                    li.list__item2(id="inoculations") <b>Inoculations:</b> none
+                    li.list__item3(id="diseases") <b>Diseases:</b> none
+                    li.list__item4(id="parasites") <b>Parasites:</b> none    

@@ -120,7 +120,7 @@ const swiper = new Swiper('.swiper', {
 const pets = [
     {
       "name": "Jennifer",
-      "img": "./assets/images/pets-jennifer.png",
+      "img": "./assets/imgs/pets-jennifer.png",
       "type": "Dog",
       "breed": "Labrador",
       "description": "Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.",
@@ -131,7 +131,7 @@ const pets = [
     },
     {
       "name": "Sophia",
-      "img": "./assets/images/pets-sophia.png",
+      "img": "./assets/imgs/pets-sophia.png",
       "type": "Dog",
       "breed": "Shih tzu",
       "description": "Sophia here and I'm looking for my forever home to live out the best years of my life. I am full of energy. Everyday I'm learning new things, like how to walk on a leash, go potty outside, bark and play with toys and I still need some practice.",
@@ -142,7 +142,7 @@ const pets = [
     },
     {
       "name": "Woody",
-      "img": "./assets/images/pets-woody.png",
+      "img": "./assets/imgs/pets-woody.png",
       "type": "Dog",
       "breed": "Golden Retriever",
       "description": "Woody is a handsome 3 1/2 year old boy. Woody does know basic commands and is a smart pup. Since he is on the stronger side, he will learn a lot from your training. Woody will be happier when he finds a new family that can spend a lot of time with him.",
@@ -153,7 +153,7 @@ const pets = [
     },
     {
       "name": "Scarlett",
-      "img": "./assets/images/pets-scarlett.png",
+      "img": "./assets/imgs/pets-scarlett.png",
       "type": "Dog",
       "breed": "Jack Russell Terrier",
       "description": "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
@@ -164,7 +164,7 @@ const pets = [
     },
     {
       "name": "Katrine",
-      "img": "./assets/images/pets-katrine.png",
+      "img": "./assets/imgs/pets-katrine.png",
       "type": "Cat",
       "breed": "British Shorthair",
       "description": "Katrine is a beautiful girl. She is as soft as the finest velvet with a thick lush fur. Will love you until the last breath she takes as long as you are the one. She is picky about her affection. She loves cuddles and to stretch into your hands for a deeper relaxations.",
@@ -175,7 +175,7 @@ const pets = [
     },
     {
       "name": "Timmy",
-      "img": "./assets/images/pets-timmy.png",
+      "img": "./assets/imgs/pets-timmy.png",
       "type": "Cat",
       "breed": "British Shorthair",
       "description": "Timmy is an adorable grey british shorthair male. He loves to play and snuggle. He is neutered and up to date on age appropriate vaccinations. He can be chatty and enjoys being held. Timmy has a lot to say and wants a person to share his thoughts with.",
@@ -186,7 +186,7 @@ const pets = [
     },
     {
       "name": "Freddie",
-      "img": "./images/pets-freddie.png",
+      "img": "./assets/imgs/pets-freddie.png",
       "type": "Cat",
       "breed": "British Shorthair",
       "description": "Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.",
@@ -197,7 +197,7 @@ const pets = [
     },
     {
       "name": "Charly",
-      "img": "./images/pets-charly.png",
+      "img": "./assets/imgs/pets-charly.png",
       "type": "Dog",
       "breed": "Jack Russell Terrier",
       "description": "This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.",
@@ -208,10 +208,20 @@ const pets = [
     }
 ];
 
+console.log(pets[3].name)
+for( let i=0; i<pets.length; i++){
+  console.log(pets[i].name)
+}
+
+
 const petsCards = document.querySelectorAll('.slider__card')
 const modalWindow = document.querySelector('.modal')
 const modalCloseButton = document.querySelector('.modal__close-button')
 const petsName = document.querySelectorAll('.slider__name')
+
+for( let i=0; i<petsName.length; i++){
+  console.log(petsName[i].textContent)
+}
 
 // const check = document.querySelector('.slider__card .slider__name').innerHTML
 // const checks = document.querySelectorAll('.slider__card .slider__name').innerHTML
@@ -222,34 +232,64 @@ const petsName = document.querySelectorAll('.slider__name')
 for (let card of petsCards){
 
   card.addEventListener('click', showModal)
+}
   // let nameCheck = card.document.querySelector('.slider__card .slider__name').innerHTML
-  nameCheck = card.getAttribute('id')
+  // nameCheck = card.getAttribute('id')
     function showModal(event){
         modalWindow.style.display = 'flex'
 
-        const chosenPet = pets[event.target.getAttribute('id')]
+        // nameCheck = event.target.getAttribute('id')
+        console.log(event.target.parentElement.children[1].textContent)
+        // const chosenPet = pets[i].[event.target.getAttribute('id')]
+        const nameOfPet = event.target.parentElement.children[1].textContent;
+      //   for(let[i,b] of pets.entries()){
+      //     if(b.name == nameOfPet){
+      //       let petsIndex = i
+      //       break;
+      //     }
+      //   }
+      // nameOfPet = petsCards.getAttribute("id")
 
-        document.querySelectorAll('[text]').forEach(elem => {
-          elem.innerHTML = chosenLanguage[elem.getAttribute('text')]
-      });
+      const index = pets.findIndex(item => item.name == nameOfPet);
+      console.log(index)  
+        // for( let i=0; i<pets.length; i++){
+        //   if (pets[i].name == event.target.parentElement.children[1].textContent){
+            let i = index;
+            document.querySelector('.modal__heading').innerHTML = pets[i].name;
+            document.querySelector('.modal__subheading').innerHTML = pets[i].type + '-' + pets[i].breed;
+            document.querySelector('.modal__description').innerHTML = pets[i].description;
+            document.querySelector('.list__item1').innerHTML = pets[i].age;
+            document.querySelector('.list__item2').innerHTML = pets[i].inoculations;
+            document.querySelector('.list__item3').innerHTML = pets[i].diseases;
+            document.querySelector('.list__item4').innerHTML = pets[i].parasites;
+            document.querySelector('.modal__img').setAttribute('src', pets[i].img)
+            
+          //  else return 
+    }        
+      
+    
+    console.log(document.querySelector('.slider__name').textContent)
 
+    const index = pets.findIndex(item => item.name === "Katrine");
+
+    // console.log(index);
       
 
         // console.log(123456)
-        showPet();
-    }
-    console.log(nameCheck)
-}
-console.log(nameCheck)
-function showPet(){  
-   
-    for(let i of pets){
+    //     showPet();
+    
+    // console.log(nameCheck)
 
-        if (pets[i].name === nameCheck){
-          fillData(pets[i])
-        }
-    }
-  }
+// console.log(nameCheck)
+// function showPet(){  
+   
+//     for(let i of pets){
+
+//         if (pets[i].name === nameCheck){
+//           fillData(pets[i])
+//         }
+//     }
+  // }
 
 function fillData(arrayItem){
   document.querySelector('.modal__heading').innerHTML = pets[i].name;

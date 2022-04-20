@@ -34,8 +34,22 @@
     justify-content: space-between;
     align-items: center; 
     @media(max-width: 767px){ 
-        // display: none;   
+        position: fixed;
+        right: -100%;  
+        top: 0px; 
+        transition: all 1s ease;
+        z-index: 99;                      
+        background-color: $secondary-color;        
+        height: 100vh;
+        width: 320px; 
+        align-items: center;         
     }
+}
+.header__nav-pets.active{
+    @media(max-width:767px){
+        right: 0px;
+        transition: all 1s ease;
+    }   
 }
 .nav-pets{
     display: flex;
@@ -58,6 +72,9 @@
     &:hover{
         color: #292929;
     }
+    @media(max-width:767px){
+        font-size: 32px;
+    }
 }
 a.active-pets{
     color: $light-color;
@@ -73,6 +90,13 @@ a.active-pets{
         width: 54px;
         top: 20px;
         left: 0;
+        @media(max-width:767px){
+            width: 120px;
+            top: 40px;            
+        }
+    }
+    @media(max-width:767px){
+        font-size: 32px;
     }
 }       
 .nav-pets__burger_button{
@@ -80,9 +104,15 @@ a.active-pets{
         @media(max-width: 767px){
             display: block;
             width: 30px;
-            height: 22px;
+            height: 30px;
             margin-right: 43px;
             cursor: pointer;
             margin-bottom: 5px;
+            z-index: 999;
+            transition: all 1s ease;
     }
-}      
+} 
+.nav-pets__burger_button.active{
+    transform: rotate(90deg);
+}
+    

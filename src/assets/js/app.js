@@ -1,118 +1,94 @@
-
 // Burger-menu --------------------------------------------
 
-const menu = document.querySelector('.nav_burger');
-const openMenuButton = document.querySelector('.nav__burger_open');
-const closeMenuButton = document.querySelector('.nav__burger_close');
+const menu = document.querySelector('.header__nav-burger');
+const openMenuButton = document.querySelector('.nav__burger_button');
 const blackout = document.querySelector('.header__blackout');
-console.log(openMenuButton)
+const body = document.querySelector('body')
 
-function openBurgerMenu(){
-    menu.classList.add('active');
-    blackout.classList.add('active');
-    openMenuButton.style.transform = 'rotate(90deg)';
-    closeMenuButton.style.transform = '';
+openMenuButton.addEventListener('click', toggleMenu)
+
+function toggleMenu(){
+  menu.classList.toggle('active');
+  blackout.classList.toggle('active');
+  openMenuButton.classList.toggle('active');
+  body.classList.toggle('active');
 }
 
-function closeBurgerMenu(){
-    menu.classList.remove('active');
-    blackout.classList.remove('active');
-    closeMenuButton.style.transform = 'rotate(90deg)';
-    openMenuButton.style.transform = '';
+const navLinks = document.querySelectorAll('.item-burger');
+
+for (let link of navLinks){
+  link.onclick = () => {
+    toggleMenu()
+  }
 }
 
-openMenuButton.onclick = function() {
-    openBurgerMenu()
-}
-
-closeMenuButton.onclick = function() {
-    closeBurgerMenu()
-}
-
-const closeMenuBurger = document.querySelector('.nav__item_burger');
-
-closeMenuBurger.onclick = function(event) {
-    event.preventDefault();
-
-    closeBurgerMenu()
-}
-
-const blackoutParent = document.querySelector('.header__burger');
+const blackoutParent = document.querySelector('.header-burger');
 
 blackoutParent.onclick = function(event) {
     if (event.target === blackout){
-        closeBurgerMenu()
+      toggleMenu()
     }   return
 }
 
-const disabledMenuLinks = document.querySelectorAll('a.disabled');
-
-for (let link of disabledMenuLinks) {
-    link.onclick = function(event) {
-        event.preventDefault()        
-    }
-}
-
-console.log(disabledMenuLinks)
-
+// --------------------------------------------------------
 // import Swiper from 'swiper/dist/js/swiper.min.js'
 // import Swiper from "./node_modules/swiper"
 // import * as Swiper from "./swiper-bundle.js"
 // import * as Swiper from "./swiper"
 // Слайдер--------------------------------------
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    loop: true,
+// const swiper = new Swiper('.swiper', {
+//     // Optional parameters
+//     loop: true,
   
-    // If we need pagination
-    // pagination: {
-    //   el: '.swiper-pagination',
-    // },
+//     // If we need pagination
+//     // pagination: {
+//     //   el: '.swiper-pagination',
+//     // },
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    slidesPerView: 3,
-    slidesPerGroup: 3,
+//     // Navigation arrows
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
+//     slidesPerView: 3,
+//     slidesPerGroup: 3,
     
-    spaceBetween: 90,
-    // loopAdditionalSlides: 1,
+//     spaceBetween: 90,
+//     // loopAdditionalSlides: 1,
     
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 0,
-        loopAdditionalSlides: 0,
-        loop: true,
-      },
+//     breakpoints: {
+//       // when window width is >= 320px
+//       320: {
+//         slidesPerView: 1,
+//         slidesPerGroup: 1,
+//         spaceBetween: 0,
+//         loopAdditionalSlides: 0,
+//         loop: true,
+//       },
            
-      // when window width is >= 767px
-      767: {
-        slidesPerView: 2,
-        slidesPerGroup: 2,
-        spaceBetween: 90,
-        loopAdditionalSlides: 0,
-        loop: true,
+//       // when window width is >= 767px
+//       767: {
+//         slidesPerView: 2,
+//         slidesPerGroup: 2,
+//         spaceBetween: 90,
+//         loopAdditionalSlides: 0,
+//         loop: true,
 
-      },
-      // when window width is >= 1280px
-      1280: {
-        slidesPerView: 3,
-        slidesPerGroup: 3,
-        spaceBetween: 90,
-        // loopAdditionalSlides: 1,
-        loop: true,
-      }   
-    }         
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-  });
+//       },
+//       // when window width is >= 1280px
+//       1280: {
+//         slidesPerView: 3,
+//         slidesPerGroup: 3,
+//         spaceBetween: 90,
+//         // loopAdditionalSlides: 1,
+//         loop: true,
+//       }   
+//     }         
+//     // And if we need scrollbar
+//     // scrollbar: {
+//     //   el: '.swiper-scrollbar',
+//     // },
+//   });
 
 
 // Modal window--------------------------------------------------------
@@ -214,120 +190,48 @@ for( let i=0; i<pets.length; i++){
 }
 
 
-const petsCards = document.querySelectorAll('.slider__card')
+const petsCards = document.querySelectorAll('.swiper__card')
 const modalWindow = document.querySelector('.modal')
 const modalCloseButton = document.querySelector('.modal__close-button')
-const petsName = document.querySelectorAll('.slider__name')
-
-for( let i=0; i<petsName.length; i++){
-  console.log(petsName[i].textContent)
-}
-
-// const check = document.querySelector('.slider__card .slider__name').innerHTML
-// const checks = document.querySelectorAll('.slider__card .slider__name').innerHTML
-
-// console.log(check)
-// console.log(checks[2])
 
 for (let card of petsCards){
 
   card.addEventListener('click', showModal)
 }
-  // let nameCheck = card.document.querySelector('.slider__card .slider__name').innerHTML
-  // nameCheck = card.getAttribute('id')
-    function showModal(event){
-        modalWindow.style.display = 'flex'
+function showModal(event){
+  modalWindow.classList.add('active');
+  body.classList.add('active');
+         
+  const nameOfPet = event.target.closest(".swiper__card").getAttribute("id");  
+  const index = pets.findIndex(item => item.name == nameOfPet);
+  let i = index;
 
-        // nameCheck = event.target.getAttribute('id')
-        console.log(event.target.parentElement.children[1].textContent)
-        // const chosenPet = pets[i].[event.target.getAttribute('id')]
-        const nameOfPet = event.target.parentElement.children[1].textContent;
-      //   for(let[i,b] of pets.entries()){
-      //     if(b.name == nameOfPet){
-      //       let petsIndex = i
-      //       break;
-      //     }
-      //   }
-      // nameOfPet = petsCards.getAttribute("id")
-
-      const index = pets.findIndex(item => item.name == nameOfPet);
-      console.log(index)  
-        // for( let i=0; i<pets.length; i++){
-        //   if (pets[i].name == event.target.parentElement.children[1].textContent){
-            let i = index;
-            document.querySelector('.modal__heading').innerHTML = pets[i].name;
-            document.querySelector('.modal__subheading').innerHTML = pets[i].type + '-' + pets[i].breed;
-            document.querySelector('.modal__description').innerHTML = pets[i].description;
-            document.querySelector('.list__item1').innerHTML = pets[i].age;
-            document.querySelector('.list__item2').innerHTML = pets[i].inoculations;
-            document.querySelector('.list__item3').innerHTML = pets[i].diseases;
-            document.querySelector('.list__item4').innerHTML = pets[i].parasites;
-            document.querySelector('.modal__img').setAttribute('src', pets[i].img)
-            
-          //  else return 
-    }        
-      
-    
-    console.log(document.querySelector('.slider__name').textContent)
-
-    const index = pets.findIndex(item => item.name === "Katrine");
-
-    // console.log(index);
-      
-
-        // console.log(123456)
-    //     showPet();
-    
-    // console.log(nameCheck)
-
-// console.log(nameCheck)
-// function showPet(){  
-   
-//     for(let i of pets){
-
-//         if (pets[i].name === nameCheck){
-//           fillData(pets[i])
-//         }
-//     }
-  // }
-
-function fillData(arrayItem){
   document.querySelector('.modal__heading').innerHTML = pets[i].name;
-  document.querySelector('.modal__subheading').innerHTML = pets[i].type + '-' + pets[i].breed;
+  document.querySelector('.modal__subheading').innerHTML = pets[i].type + ' - ' + pets[i].breed;
   document.querySelector('.modal__description').innerHTML = pets[i].description;
   document.querySelector('.list__item1').innerHTML = pets[i].age;
   document.querySelector('.list__item2').innerHTML = pets[i].inoculations;
   document.querySelector('.list__item3').innerHTML = pets[i].diseases;
   document.querySelector('.list__item4').innerHTML = pets[i].parasites;
-  document.querySelector('.slider__img img').setAttribute.src = pets[i].img;
-}
-
-
+  document.querySelector('.modal__img').setAttribute('src', pets[i].img)  
+ }            
+     
 console.log(pets[1].name)
+
+function closeModal(){
+  modalWindow.classList.remove('active');
+  body.classList.remove('active');
+}
 
 modalCloseButton.onclick = function(e){
     e.preventDefault()
-    modalWindow.style.display = 'none'
+    closeModal()  
 }
 
-const modalWindowParent = document.querySelector('.friends__background')
+const modalWindowParent = document.querySelector('.modal_background')
 
 modalWindowParent.onclick = function(event) {
   if (event.target === modalWindow){
-    modalWindow.style.display = 'none'
-  }   return
+    closeModal()
+  } return
 }
-// const modal = document.querySelector('.modal__window')
-
-// modal.onmouseover = function(){
-//   modalCloseButton.style.background = 'none'
-// }
-// modal.onmouseout = function(){
-//   modalCloseButton.style.background = '#FDDCC4'
-// }
-
-
-
-// console.log(petsCards)
-// console.log(modalWindow)
-// console.log(modalCloseButton)

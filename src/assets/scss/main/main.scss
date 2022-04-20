@@ -30,3 +30,7 @@ a{
 button{
     cursor: pointer;
 }
+body.active{
+    overflow-y:  hidden;
+}
+

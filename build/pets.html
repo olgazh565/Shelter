@@ -9,68 +9,65 @@
   </head>
   <body> 
     <header class="pets-header header__burger"> 
-      <div class="container header-pets">
+      <div class="container header-pets header-burger">
         <div class="header__logo-pets"><a href="./index.html"> 
             <h1 class="header__title-pets">Cozy House</h1></a>
           <p class="header__subtitle-pets">Shelter for pets in Boston</p>
         </div>
         <div class="header__blackout">
-          <div class="header__wrapper">
-            <nav class="header__nav-pets nav_burger"> 
-              <ul class="nav-pets"> 
-                <li class="nav__item-pets"><a href="./index.html">About the shelter</a></li>
-                <li class="nav__item-pets"> <a class="active-pets nav__item_burger" href="#">Our pets</a></li>
-                <li class="nav__item-pets"><a class="disabled" href="./index.html#help">Help the shelter</a></li>
-                <li class="nav__item-pets"> <a class="disabled" href="#contacts">Contacts</a></li>
-              </ul>
-              <div class="nav__burger_close"> <img src="./assets/imgs/burger-open.svg" alt="burger"></div>
-            </nav>
-          </div>
+          <nav class="header__nav-pets header__nav-burger">
+            <ul class="nav-pets">
+              <li class="nav__item-pets item-burger"> <a href="./index.html">About the shelter</a></li>
+              <li class="nav__item-pets item-burger"> <a class="active-pets" href="#">Our pets</a></li>
+              <li class="nav__item-pets item-burger"> <a href="./index.html#help">Help the shelter</a></li>
+              <li class="nav__item-pets item-burger"> <a href="#contacts">Contacts</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="nav-pets__burger nav__burger_open"><img src="./assets/imgs/burger-pets.svg" alt="burger"></div>
+        <div class="nav-pets__burger_button nav__burger_button"><img src="./assets/imgs/burger-pets.svg" alt="burger"></div>
       </div>
     </header>
     <main class="main">
-      <div class="pets__background"> 
+      <div class="pets__background modal_background">
         <div class="container pets"> 
           <h2 class="pets__heading">Our friends who <br/> are looking for a house</h2>
           <div class="pets__cards"> 
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Katrine"> 
               <div class="card__img"> <img src="./assets/imgs/pets-katrine.png" alt="katrine"></div>
               <div class="card__name">Katrine </div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Jennifer"> 
               <div class="card__img"> <img src="./assets/imgs/pets-jennifer.png" alt="jennifer"></div>
               <div class="card__name">Jennifer </div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Woody">
               <div class="card__img"> <img src="./assets/imgs/pets-woody.png" alt="woody"></div>
               <div class="card__name">Woody </div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Sophia"> 
               <div class="card__img"> <img src="./assets/imgs/pets-sophia.png" alt="sophia"></div>
               <div class="card__name">Sophia </div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Timmy">
               <div class="card__img"> <img src="./assets/imgs/pets-timmy.png" alt="timmy"></div>
               <div class="card__name">Timmy</div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Charly">
               <div class="card__img"> <img src="./assets/imgs/pets-charly.png" alt="charly"></div>
               <div class="card__name">Charly </div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Scarlett"> 
               <div class="card__img"> <img src="./assets/imgs/pets-scarlet.png" alt="scarlet"></div>
               <div class="card__name">Scarlett </div>
               <button class="card__button">Learn more </button>
             </div>
-            <div class="pets_card card"> 
+            <div class="pets_card card swiper__card" id="Freddie"> 
               <div class="card__img"> <img src="./assets/imgs/pets-freddie.png" alt="freddie"></div>
               <div class="card__name">Freddie </div>
               <button class="card__button">Learn more     </button>
@@ -82,6 +79,22 @@
             <button class="navigation__button">1</button>
             <button class="navigation__button"> <img src="./assets/imgs/right.svg" alt="right"></button>
             <button class="navigation__button"> <img src="./assets/imgs/fast-right.svg" alt="right"></button>
+          </div>
+        </div>
+        <div class="modal"> 
+          <div class="modal__window"> 
+            <button class="modal__close-button"><img src="./assets/imgs/vector.svg" alt="close"></button><img class="modal__img" src="./assets/imgs/pets-jennifer-modal.png" alt="puppy">
+            <div class="modal__content">
+              <p class="modal__heading" id="name">Jennifer</p>
+              <p class="modal__subheading" id="type">Dog - Labrador</p>
+              <p class="modal__description" id="description">Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.</p>
+              <ul class="modal__list"> 
+                <li class="list__item1" id="age"><b>Age:</b> 2 months</li>
+                <li class="list__item2" id="inoculations"><b>Inoculations:</b> none</li>
+                <li class="list__item3" id="diseases"><b>Diseases:</b> none</li>
+                <li class="list__item4" id="parasites"><b>Parasites:</b> none    </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

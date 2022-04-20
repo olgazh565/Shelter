@@ -1,25 +1,26 @@
 .header__background 
     .header__container.container
-        header.header.header__burger 
+        header.header.header-burger
             .header__logo
                 a(href="##") 
                     h1.header__title Cozy House
-                p.header__subtitle Shelter for pets in Boston
+                p.header__subtitle Shelter for pets in Boston              
             .header__blackout
-                .header__wrapper
-                    nav.header__nav.nav_burger 
-                        ul.nav 
-                            li.nav__item 
-                                a.active.nav__item_burger(href='#') About the shelter
-                            li.nav__item 
-                                a(href='./pets.html') Our pets
-                            li.nav__item
-                                a.disabled(href='#help') Help the shelter
-                            li.nav__item 
-                                a.disabled(href='#contacts') Contacts
-                        .nav__burger_close 
-                            img(src="./assets/imgs/burger-open.svg", alt="burger")
-            .nav__burger_open
+                nav.header__nav.header__nav-burger
+                    .header__logo-burger
+                        a(href="##") 
+                            h1.header__title Cozy House
+                        p.header__subtitle Shelter for pets in Boston                              
+                    ul.nav 
+                        li.nav__item.item-burger 
+                            a.active(href='#') About the shelter
+                        li.nav__item.item-burger  
+                            a(href='./pets.html') Our pets
+                        li.nav__item.item-burger 
+                            a(href='#help') Help the shelter
+                        li.nav__item.item-burger  
+                            a(href='#contacts') Contacts                    
+            .nav__burger.nav__burger_button
                 img(src="./assets/imgs/burger.svg", alt="burger")
         section.header__intro        
             .header__text 

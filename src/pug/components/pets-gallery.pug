@@ -1,43 +1,43 @@
-.pets__background 
+.pets__background.modal_background
     .container.pets 
         h2.pets__heading Our friends who <br/> are looking for a house
         .pets__cards 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Katrine") 
                 .card__img 
                     img(src="./assets/imgs/pets-katrine.png", alt="katrine")
                 .card__name Katrine 
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Jennifer") 
                 .card__img 
                     img(src="./assets/imgs/pets-jennifer.png", alt="jennifer")
                 .card__name Jennifer 
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Woody")
                 .card__img 
                     img(src="./assets/imgs/pets-woody.png", alt="woody")
                 .card__name Woody 
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Sophia") 
                 .card__img 
                     img(src="./assets/imgs/pets-sophia.png", alt="sophia")
                 .card__name Sophia 
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Timmy")
                 .card__img 
                     img(src="./assets/imgs/pets-timmy.png", alt="timmy")
                 .card__name Timmy
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Charly")
                 .card__img 
                     img(src="./assets/imgs/pets-charly.png", alt="charly")
                 .card__name Charly 
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Scarlett")  
                 .card__img 
                     img(src="./assets/imgs/pets-scarlet.png", alt="scarlet")
                 .card__name Scarlett 
                 button.card__button Learn more 
-            .pets_card.card 
+            .pets_card.card.swiper__card(id="Freddie")  
                 .card__img 
                     img(src="./assets/imgs/pets-freddie.png", alt="freddie")
                 .card__name Freddie 
@@ -52,3 +52,17 @@
                 img(src="./assets/imgs/right.svg", alt="right")
             button.navigation__button 
                 img(src="./assets/imgs/fast-right.svg", alt="right") 
+    .modal 
+        .modal__window 
+            button.modal__close-button
+                img(src="./assets/imgs/vector.svg", alt="close")
+            img.modal__img(src="./assets/imgs/pets-jennifer-modal.png", alt="puppy")
+            .modal__content
+                p.modal__heading(id="name") Jennifer
+                p.modal__subheading(id="type") Dog - Labrador
+                p.modal__description(id="description") Jennifer is a sweet 2 months old Labrador that is patiently waiting to find a new forever home. This girl really enjoys being able to go outside to run and play, but won't hesitate to play up a storm in the house if she has all of her favorite toys.
+                ul.modal__list 
+                    li.list__item1(id="age") <b>Age:</b> 2 months
+                    li.list__item2(id="inoculations") <b>Inoculations:</b> none
+                    li.list__item3(id="diseases") <b>Diseases:</b> none
+                    li.list__item4(id="parasites") <b>Parasites:</b> none    

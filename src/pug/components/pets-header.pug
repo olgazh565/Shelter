@@ -1,22 +1,19 @@
 header.pets-header.header__burger 
-    .container.header-pets
+    .container.header-pets.header-burger
         .header__logo-pets
             a(href="./index.html") 
                 h1.header__title-pets Cozy House
             p.header__subtitle-pets Shelter for pets in Boston
         .header__blackout
-            .header__wrapper
-                nav.header__nav-pets.nav_burger 
-                    ul.nav-pets 
-                        li.nav__item-pets
-                            a(href='./index.html') About the shelter
-                        li.nav__item-pets 
-                            a.active-pets.nav__item_burger(href='#') Our pets
-                        li.nav__item-pets
-                            a.disabled(href='./index.html#help') Help the shelter
-                        li.nav__item-pets 
-                            a.disabled(href='#contacts') Contacts
-                    .nav__burger_close 
-                        img(src="./assets/imgs/burger-open.svg", alt="burger")
-        .nav-pets__burger.nav__burger_open
+            nav.header__nav-pets.header__nav-burger
+                ul.nav-pets
+                    li.nav__item-pets.item-burger 
+                        a(href='./index.html') About the shelter
+                    li.nav__item-pets.item-burger  
+                        a.active-pets(href='#') Our pets
+                    li.nav__item-pets.item-burger 
+                        a(href='./index.html#help') Help the shelter
+                    li.nav__item-pets.item-burger  
+                        a(href='#contacts') Contacts
+        .nav-pets__burger_button.nav__burger_button
             img(src="./assets/imgs/burger-pets.svg", alt="burger")

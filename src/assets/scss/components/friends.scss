@@ -24,13 +24,13 @@
         line-height: 130%;       
     }
 }
-.slider{
+.swiper{
     display: flex;
     justify-content: space-between;    
     position: relative;    
     width: 990px;
     // width: 100%;
-    overflow: hidden;   
+    // overflow: hidden;   
     margin: 59px auto 60px auto; 
     
     @media(max-width: 1279px){
@@ -42,17 +42,19 @@
     }
 }
 .swiper-wrapper{    
-    width: 100%;
+    // width: 100%;
+    width: 990px;
     height: 100%;
     // z-index: 1;
     display: flex;
     transition-property: transform;
     justify-content: space-between;    
-    // gap: 0 90px;
-    margin: 0 auto;   
+    gap: 0 90px;
+    // margin: 0 auto;  
+    overflow: hidden;
         
 }
-.slider__card{
+.swiper-slide{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,16 +65,22 @@
         cursor: pointer;
         background: $secondary-color;
         box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
-        .slider__button{
+        .swiper__button{
             background: #FDDCC4;
             border: none;
         }
     }
 }
-.slider__img{
+.swiper__slide_wrap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.swiper__img{
     max-width: 100%;
 }
-.slider__name{
+.swiper__name{
     font-family: $primary-font;
     color: #545454;
     font-size: 20px;
@@ -80,7 +88,7 @@
     font-weight: 400;
     padding: 22px 0 30px 2px;    
 }
-.slider__button{
+.swiper__button{
     font-family: $primary-font;
     color: #292929;
     font-size: 17px;
@@ -97,9 +105,7 @@
 }
 .friends__button-left{
     position: absolute;    
-    // left: -10.5%;
-    left: 1px;
-    // top: -50px;
+    left: -10.5%;
     top: 50%;
     transform: translate(0, -50%);
     width: 52px;
@@ -115,22 +121,18 @@
         border: none;
     }
     @media(max-width: 1279px){
-        // left: -11%;
-        left: 1px;
-
+        left: -11%;
+        
     }
     @media(max-width: 767px){
-        // left: 43px;
-        left: 1px;
-        // top: 480px;
-        top: 50%;
+        left: 43px;
+        top: 480px;
+        
     }
 }
 .friends__button-right{
     position: absolute;    
-    left: 938px;
-    // left: 105.5%;
-    // top: -50px;
+    left: 105.5%;
     top: 50%;
     transform: translate(0, -50%);
     width: 52px;
@@ -146,14 +148,11 @@
         border: none;
     }
     @media(max-width: 1279px){
-        // left: 102%;
-        left: 575px;
+        left: 102%;       
     }
     @media(max-width: 767px){
-        // left: 175px;
-        left: 215px;
-        // top: 480px;
-        top: 50%;
+        left: 175px;
+        top: 480px;        
     }
 }
 .friends__button_main{
